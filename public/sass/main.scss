@@ -22,6 +22,12 @@ html, body {
         &:before {
             opacity: 1;
         }
+
+        #highlight {
+            img {
+                top: 0;
+            }
+        }
     }
 
     &:before {
@@ -57,6 +63,9 @@ html, body {
     
         img {
             margin: 0 auto -10px;
+            position: relative;
+            transition: all 1.5s ease-out;
+            top: -25px;
         }
     
         h2 {

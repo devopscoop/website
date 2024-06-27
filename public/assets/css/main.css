@@ -72,6 +72,9 @@ html, body {
 #wrapper.render:before {
   opacity: 1;
 }
+#wrapper.render #highlight img {
+  top: 0;
+}
 #wrapper:before {
   content: "";
   position: fixed;
@@ -96,6 +99,9 @@ html, body {
 }
 #wrapper #highlight img {
   margin: 0 auto -10px;
+  position: relative;
+  transition: all 1.5s ease-out;
+  top: -25px;
 }
 #wrapper #highlight h2 {
   color: #f8f9fa;
