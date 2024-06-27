@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Reem+Kufi+Ink&display=swap");
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -57,11 +58,11 @@ html, body {
   min-height: 100%;
   min-width: 100%;
   padding: 0;
-  font: 300 14px "Source Serif 4", serif;
+  font: 300 14px "Reem Kufi Ink", sans-serif;
   text-align: center;
   line-height: 1.2;
-  color: #FFF;
-  background: #000;
+  color: rgba(0, 0, 0, 0.5);
+  background: HSLA(266, 37%, 47%, 1);
 }
 
 #wrapper {
@@ -75,7 +76,8 @@ html, body {
   content: "";
   position: fixed;
   inset: 0px;
-  background: url("../img/bg.svg") no-repeat center center/cover;
+  background-color: hsla(286, 100%, 50%, 0.79);
+  background-image: radial-gradient(at 40% 20%, hsl(313, 100%, 74%) 0px, transparent 50%), radial-gradient(at 83% 6%, hsl(141, 71%, 62%) 0px, transparent 50%), radial-gradient(at 16% 68%, hsl(280, 100%, 93%) 0px, transparent 50%), radial-gradient(at 82% 7%, hsl(24, 100%, 76%) 0px, transparent 50%), radial-gradient(at 19% 67%, hsl(307, 100%, 77%) 0px, transparent 50%), radial-gradient(at 73% 77%, hsl(231, 100%, 70%) 0px, transparent 50%), radial-gradient(at 12% 30%, hsl(268, 100%, 76%) 0px, transparent 50%);
   transition: opacity 2s ease-in-out;
   opacity: 0;
 }
@@ -83,7 +85,7 @@ html, body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 220px;
+  top: 150px;
   margin: auto;
   width: 400px;
   transition: opacity 1.5s ease-in-out;
@@ -95,17 +97,10 @@ html, body {
 #wrapper #highlight img {
   margin: 0 auto -10px;
 }
-#wrapper #highlight h1 {
-  color: #dbe4ff;
-  font: 400 48px "Oswald", sans-serif;
-  letter-spacing: 0.5px;
-  margin-bottom: -5px;
-}
 #wrapper #highlight h2 {
   color: #f8f9fa;
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 65px;
+  font: 400 24px "Cairo Play", sans-serif;
+  margin-bottom: 5px;
 }
 #wrapper p#established {
   position: absolute;
