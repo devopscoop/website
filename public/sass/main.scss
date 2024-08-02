@@ -20,7 +20,7 @@ html, body {
     min-width: 100%;
 
     #content {
-        width: 60%;
+        width: 80%;
         border-radius: 5px;
         background: hsla(280,100%,93%,0.5);
         position: relative;
@@ -69,6 +69,11 @@ html, body {
 
         &.render {
             opacity: 1;
+        }
+
+        &.inner {
+            position: inherit;
+            width: auto;
         }
     
         img {
