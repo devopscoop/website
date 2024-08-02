@@ -1,0 +1,33 @@
+SCM:
+
+Does this need to be said? Looks like maybe GitLab doesn't do sub-repos anymore?
+	SCM platform repo structure should be flat, because not all SCM platforms support sub-directories (looking at you GitHub.) For example, use "devopscoop/app-frontend" and "devopscoop/app-backend" instead of "devopscoop/app/frontend" and "devopscoop/app/backend".
+
+# TODO: is this true?
+Avoid assigning git repo privileges per directory or with CODEOWNERS, because not all SCM platforms support it. 
+
+terraform code:
+
+There should be one set of terraform code per AWS account to control account-level things like Terraform buckets and DynamoDB.
+Each git repository should have one pipeline, because KISS.
+Each set of per-account terraform code should be in a separate git repo, because PoLP.
+
+
+
+Environments:
+
+There should be one set of terraform code per deployhment environment, because PoLP.
+
+
+
+per eks cluster code?
+
+https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities
+
+Do you need more than one cluster per env in the foreseeable future? Yes.
+Are you going to have more than one env in your env-tf repo? No.
+
+https://docs.aws.amazon.com/SetUp/latest/UserGuide/setup-signinadmin.html
+
+
+
