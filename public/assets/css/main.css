@@ -1,124 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Reem+Kufi+Ink&display=swap");
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* Error: expected ";".
+ *    ,
+ * 25 |         position: relative;
+ *    |                 ^
+ *    '
+ *   sass/main.scss 25:17  root stylesheet */
 
-/*
-  2. Remove default margin
-*/
-* {
-  margin: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-  5. Improve media defaults
-*/
-img, picture, video, canvas, svg {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  max-width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ";".\a    \2577 \a 25 \2502          position: relative;\a    \2502                  ^\a    \2575 \a   sass/main.scss 25:17  root stylesheet';
 }
-
-/*
-  6. Remove built-in form typography styles
-*/
-input, button, textarea, select {
-  font: inherit;
-}
-
-/*
-  7. Avoid text overflows
-*/
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  8. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
-
-html, body {
-  margin: 0;
-  min-height: 100%;
-  min-width: 100%;
-  padding: 0;
-  font: 300 14px "Reem Kufi Ink", sans-serif;
-  text-align: center;
-  line-height: 1.2;
-  color: rgba(0, 0, 0, 0.5);
-  background: HSLA(266, 37%, 47%, 1);
-}
-
-#wrapper {
-  min-height: 100%;
-  min-width: 100%;
-}
-#wrapper #content {
-  width: 60%;
-  border-radius: 5px;
-  background: hsla(280, 100%, 93%, 0.5);
-}
-#wrapper.render:before {
-  opacity: 1;
-}
-#wrapper.render #highlight img {
-  top: 0;
-}
-#wrapper:before {
-  content: "";
-  position: fixed;
-  inset: 0px;
-  background-color: hsla(286, 100%, 50%, 0.79);
-  background-image: radial-gradient(at 40% 20%, hsl(313, 100%, 74%) 0px, transparent 50%), radial-gradient(at 83% 6%, hsl(141, 71%, 62%) 0px, transparent 50%), radial-gradient(at 16% 68%, hsl(280, 100%, 93%) 0px, transparent 50%), radial-gradient(at 82% 7%, hsl(24, 100%, 76%) 0px, transparent 50%), radial-gradient(at 19% 67%, hsl(307, 100%, 77%) 0px, transparent 50%), radial-gradient(at 73% 77%, hsl(231, 100%, 70%) 0px, transparent 50%), radial-gradient(at 12% 30%, hsl(268, 100%, 76%) 0px, transparent 50%);
-  transition: opacity 2s ease-in-out;
-  opacity: 0;
-}
-#wrapper #highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 150px;
-  margin: auto;
-  width: 400px;
-  transition: opacity 1.5s ease-in-out;
-  opacity: 0;
-}
-#wrapper #highlight.render {
-  opacity: 1;
-}
-#wrapper #highlight img {
-  margin: 0 auto -10px;
-  position: relative;
-  transition: all 1.5s ease-out;
-  top: -25px;
-}
-#wrapper #highlight h2 {
-  color: #f8f9fa;
-  font: 400 24px "Cairo Play", sans-serif;
-  margin-bottom: 5px;
-  filter: drop-shadow(2px 1px 2px #000);
-}
-#wrapper p#established {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-
-/*# sourceMappingURL=main.css.map */

@@ -22,6 +22,13 @@ html, body {
         width: 60%;
         border-radius: 5px;
         background: hsla(280,100%,93%,0.5) 
+        position: relative;
+        margin: 45px auto;
+        padding: 20px;
+
+        .markdown-body {
+            font-family: inherit;
+        }
     }
 
     &.render {
