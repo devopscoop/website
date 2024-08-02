@@ -69,6 +69,11 @@ html, body {
   min-height: 100%;
   min-width: 100%;
 }
+#wrapper #content {
+  width: 60%;
+  border-radius: 5px;
+  background: hsla(280, 100%, 93%, 0.5);
+}
 #wrapper.render:before {
   opacity: 1;
 }
