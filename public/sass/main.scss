@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Reem+Kufi+Ink&display=swap');
 @import "_reset";
+@import "_markdown";
 
 html, body {
   margin: 0;
@@ -17,6 +18,15 @@ html, body {
 #wrapper {
     min-height: 100%;
     min-width: 100%;
+
+    #content {
+        width: 80%;
+        border-radius: 5px;
+        background: hsla(280,100%,93%,0.5);
+        position: relative;
+        margin: 45px auto;
+        padding: 20px;
+    }
 
     &.render {
         &:before {
@@ -59,6 +69,11 @@ html, body {
 
         &.render {
             opacity: 1;
+        }
+
+        &.inner {
+            position: inherit;
+            width: auto;
         }
     
         img {

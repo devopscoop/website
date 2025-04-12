@@ -1,0 +1,113 @@
+.markdown-body {
+    font: 300 14px "Reem Kufi Ink", sans-serif;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+
+    strong {
+        color: hsl(231, 19%, 20%);
+        font-weight: 700;
+    }
+
+    pre {
+        overflow: auto;
+        line-height: 1.45;
+        font-size: 85%;
+        word-wrap: normal;
+        padding: 2px;
+
+        code {
+            border-radius: 6px;
+        }
+    }
+
+    h1,h2,h3,h4,h5 {
+        margin: 15px 0;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    a {
+        color: hsl(220, 91%, 54%);
+        text-decoration: none;
+
+        &:visited {
+            color: hsl(231, 97%, 72%);
+        }
+    }
+
+    ol, ul, li {
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+
+        p {
+            display: inline-block;
+        }
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid hsl(230, 12%, 49%);
+        margin: 20px 0;
+    }
+
+    blockquote {
+        padding: 0 10px;
+        color: hsl(230, 12%, 49%);
+        border-left: 3px solid hsl(228, 15%, 57%);
+    }
+
+    table {
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        overflow: auto;
+        border-spacing: 0;
+        border-collapse: collapse;
+
+        tr {
+            border-top: 1px solid hsl(230, 12%, 49%);
+
+            &:nth-child(2n) {
+                background-color: hsl(267, 84%, 81%, 0.2);
+            }
+        }
+
+        td, th {
+            padding: 6px 13px;
+            border: 1px solid hsl(230, 13%, 55%);
+        }
+    }
+
+    .katex {
+        font-size: 18px;
+        color: hsl(231, 19%, 20%);
+    }
+}
