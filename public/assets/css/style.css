@@ -4,26 +4,14 @@
     box-sizing: border-box;
 }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 body {
     font-family: 'Courier New', monospace;
-    background: linear-gradient(-45deg, #4db896, #6b4d8c, #5c3310, #4db896, #6b4d8c);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
+    background: linear-gradient(135deg, #336b5c, #4d3366);
+    background-size: 200% 200%;
     min-height: 100vh;
     color: #e0e0e0;
     line-height: 1.7;
+    transition: background-position 0.1s ease;
 }
 
 a {
