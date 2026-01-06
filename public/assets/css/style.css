@@ -44,18 +44,25 @@ nav {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #7fffbf;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(127, 255, 191, 0.5);
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo:hover {
     text-decoration: none;
-    color: #d9a3ff;
-    text-shadow: 0 0 20px #d9a3ff;
+}
+
+.header-logo {
+    height: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+body.scrolled .header-logo {
+    height: 40px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-links {
