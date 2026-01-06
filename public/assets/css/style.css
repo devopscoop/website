@@ -289,15 +289,15 @@ footer {
 
 .social-links .prohibited {
     cursor: not-allowed;
-    color: #cc3333;
 }
 
 .social-links .prohibited > svg {
-    fill: #cc3333 !important;
+    fill: #555 !important;
+    transition: fill 0.2s ease;
 }
 
-.social-links .prohibition-sign {
-    display: none;
+.social-links .prohibited:hover > svg {
+    fill: #cc3333 !important;
 }
 
 @media (max-width: 768px) {
