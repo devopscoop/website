@@ -1,0 +1,56 @@
+# Header
+
+-   devops.coop
+-   Join
+-   Get Started
+
+
+# devops.coop (main page)
+
+[Logo]
+
+Our purpose is to create and support evolving, opinionated, infrastructure as code (IaC) repositories based on free, libre, open source software (FOSS) that can be used to build production-ready, compliant, secure infrastructure.
+
+
+We don't take VC money - this is not a profit-seeking organization - this is a cooperative of software engineers building good software together because apes together strong (https://knowyourmeme.com/memes/apes-together-strong).
+
+The goal is to build and maintain repositories that we fork and regularly pull from. We want to enable small DevOps teams to build amazing infra and receive the support, experience, and updates from the entire Cooperative.
+
+Additionally, we want to shift organizations away from proprietary, Big Tech vendor lock-in and enshittification, and drive adoption of free, decentralized, self-hostable solutions that respect users' privacy. We recognize that not everyone can abandon AWS, Google, Cloudflare, and the rest, but we will do our part to provide alternative options and nudge our community towards more ethical infrastructure.
+
+If this sounds interesting, join us! [Button that goes to the Join page]
+
+Innovate and iterate!
+
+[Maybe we can throw some graphics and shit in here? I dunno. Kind of a lot of words. What do you think?] 
+
+# "Join" page
+
+We are always looking for like-minded individuals and organizations to collaborate with!
+
+As a member:
+
+
+-   You will be added to the devopscoop organization (https://codeberg.org/org/devopscoop/members) with write access to all repositories, so you can create pull requests and start helping out!
+-   You may request access to our group chat (currently Signal)
+-   You may vote on issues and propose issues to vote on.
+-   You may propose new repositories to be added to the organization.
+
+
+
+To join, 
+
+
+1.  Fork https://codeberg.org/devopscoop/organization.
+2.  Sign the bottom of https://codeberg.org/devopscoop/organization/src/branch/main/governance.md.
+3.  Create a PR.
+
+
+Other ways to help:
+
+
+-   Tell people about devops.coop
+-   Upvote our repos
+
+
+# Get Started page

@@ -1,28 +1,29 @@
-# DevOps.coop Static Website
+# DevOps.coop Website
 
 ## Overview
-A static website for devops.coop with the tagline "innovate and iterate" - providing opinionated technology solutions via open source implementations.
+A multi-page static website for devops.coop - a cooperative of software engineers building opinionated infrastructure as code repositories based on free, libre, open source software (FOSS).
 
 ## Project Structure
-- `public/` - Static website files served to users
+- `public/` - Static website files
   - `index.html` - Main landing page
-  - `behringer.html` - Additional page
-  - `template-md.html` - Markdown template
-  - `assets/` - Static assets (CSS, JS, images)
-  - `sass/` - SCSS source files
-  - `content/` - Markdown content files
-- `LICENSE` - Project license
+  - `join.html` - Membership information and how to join
+  - `get-started.html` - Getting started with the repositories
+  - `assets/` - Static assets
+    - `css/style.css` - Main stylesheet
+    - `img/` - Images (logo)
 
 ## Technology Stack
-- **Frontend**: Static HTML, CSS, JavaScript
-- **CSS Preprocessing**: Dart Sass (SCSS)
+- **Frontend**: Static HTML, CSS
 - **Server**: Python HTTP server (development)
+- **Deployment**: Static site hosting
+
+## Pages
+1. **Home** - Purpose statement, mission, and call to action
+2. **Join** - Member benefits and instructions to join via Codeberg
+3. **Get Started** - Links to Codeberg repositories and quick start guide
 
 ## Development
 The website is served using Python's built-in HTTP server on port 5000.
 
-### SASS Compilation
-The original project used Docker with Dart Sass to compile SCSS. The compiled CSS is already included in `public/assets/css/`.
-
-## Deployment
-Configured as a static site deployment serving the `public/` directory.
+## Color Scheme
+The site uses a gradient background (pink, blue, green, purple) with purple accent colors for buttons and headings.
