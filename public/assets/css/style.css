@@ -289,22 +289,14 @@ footer {
 
 .social-links .prohibited {
     cursor: not-allowed;
-    opacity: 0.5;
 }
 
-.social-links .prohibited > svg:first-child {
-    fill: rgba(255, 255, 255, 0.4);
+.social-links .prohibited > svg {
+    fill: #cc3333;
 }
 
 .social-links .prohibition-sign {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 32px;
-    height: 32px;
-    color: #ff4444;
-    filter: drop-shadow(0 0 3px rgba(255, 68, 68, 0.5));
+    display: none;
 }
 
 @media (max-width: 768px) {
