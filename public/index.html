@@ -11,9 +11,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-logo">
-                <img src="./assets/img/logo_small.png" alt="devops.coop" class="header-logo" />
-            </a>
+            <div class="nav-logo-slot"></div>
             <div class="nav-links">
                 <a href="join.html">Join</a>
                 <a href="get-started.html" class="btn btn-outline">Get Started</a>
@@ -24,7 +22,9 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <img src="./assets/img/logo_small.png" alt="devops.coop" class="hero-logo" />
+                <div class="hero-logo-wrapper">
+                    <img src="./assets/img/logo_small.png" alt="devops.coop" class="hero-logo" id="floating-logo" />
+                </div>
                 <p class="hero-text">
                     Our purpose is to create and support evolving, opinionated, infrastructure as code (IaC) repositories based on free, libre, open source software (FOSS) that can be used to build production-ready, compliant, secure infrastructure.
                 </p>
