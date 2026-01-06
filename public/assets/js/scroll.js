@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!logo || !wrapper || !headerSlot) return;
     
-    let startRect, endRect, scrollStart, scrollEnd;
-    let logoOriginalHeight;
+    let startRect, headerSlotFixed;
+    let logoOriginalHeight, logoOriginalWidth;
     const targetScale = 0.25;
     let isFloating = false;
     let ticking = false;
+    let scrollStart, scrollEnd;
     
     function calculateMetrics() {
         logo.classList.remove('floating');
@@ -18,28 +19,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const wrapperRect = wrapper.getBoundingClientRect();
         const logoRect = logo.getBoundingClientRect();
         
+        logoOriginalHeight = logoRect.height;
+        logoOriginalWidth = logoRect.width;
+        
         startRect = {
             top: wrapperRect.top + window.scrollY + (wrapperRect.height - logoRect.height) / 2,
-            left: wrapperRect.left + (wrapperRect.width - logoRect.width) / 2,
-            width: logoRect.width,
-            height: logoRect.height
+            left: wrapperRect.left + (wrapperRect.width - logoRect.width) / 2
         };
-        
-        logoOriginalHeight = logoRect.height;
         
         const headerSlotRect = headerSlot.getBoundingClientRect();
         const targetHeight = 40;
         const scaledWidth = (logoRect.width / logoRect.height) * targetHeight;
         
-        endRect = {
-            top: headerSlotRect.top + window.scrollY + (headerSlotRect.height - targetHeight) / 2,
-            left: headerSlotRect.left + (headerSlotRect.width - scaledWidth) / 2,
-            width: scaledWidth,
-            height: targetHeight
+        headerSlotFixed = {
+            top: headerSlotRect.top + (headerSlotRect.height - targetHeight) / 2,
+            left: headerSlotRect.left + 5
         };
         
-        scrollStart = startRect.top - 100;
-        scrollEnd = startRect.top + logoOriginalHeight;
+        scrollStart = startRect.top - 80;
+        scrollEnd = startRect.top + logoOriginalHeight * 0.5;
         
         updateLogo();
     }
@@ -48,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return start + (end - start) * t;
     }
     
-    function easeOutCubic(t) {
-        return 1 - Math.pow(1 - t, 3);
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
     
     function updateLogo() {
@@ -66,23 +64,37 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let progress = (scrollY - scrollStart) / (scrollEnd - scrollStart);
         progress = Math.max(0, Math.min(1, progress));
-        progress = easeOutCubic(progress);
+        const easedProgress = easeInOutCubic(progress);
         
         if (!isFloating) {
             logo.classList.add('floating');
             isFloating = true;
         }
         
-        const scale = lerp(1, targetScale, progress);
-        const currentTop = lerp(startRect.top - scrollY, endRect.top - scrollY, progress);
-        const currentLeft = lerp(startRect.left, endRect.left + (endRect.width * (1 - 1/targetScale) * progress / 2), progress);
+        const scale = lerp(1, targetScale, easedProgress);
         
-        const offsetX = (startRect.width * (1 - scale)) / 2;
-        const offsetY = (startRect.height * (1 - scale)) / 2;
+        const startViewportTop = startRect.top - scrollY;
+        const endViewportTop = headerSlotFixed.top;
         
-        logo.style.top = (currentTop + offsetY) + 'px';
-        logo.style.left = (currentLeft + offsetX) + 'px';
+        const scaledHeight = logoOriginalHeight * scale;
+        const scaledWidth = logoOriginalWidth * scale;
+        
+        const startCenterX = startRect.left + logoOriginalWidth / 2;
+        const startCenterY = startViewportTop + logoOriginalHeight / 2;
+        
+        const endCenterX = headerSlotFixed.left + scaledWidth / 2;
+        const endCenterY = endViewportTop + scaledHeight / 2;
+        
+        const currentCenterX = lerp(startCenterX, endCenterX, easedProgress);
+        const currentCenterY = lerp(startCenterY, endCenterY, easedProgress);
+        
+        const currentTop = currentCenterY - (logoOriginalHeight * scale) / 2;
+        const currentLeft = currentCenterX - (logoOriginalWidth * scale) / 2;
+        
+        logo.style.top = currentTop + 'px';
+        logo.style.left = currentLeft + 'px';
         logo.style.transform = `scale(${scale})`;
+        logo.style.transformOrigin = 'top left';
     }
     
     function onScroll() {
