@@ -44,13 +44,17 @@ nav {
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7fffbf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(127, 255, 191, 0.5);
 }
 
-.header-logo {
-    height: 40px;
-    width: auto;
+.nav-logo:hover {
+    color: #d9a3ff;
+    text-shadow: 0 0 20px #d9a3ff;
 }
 
 .nav-links {
