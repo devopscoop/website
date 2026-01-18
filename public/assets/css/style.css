@@ -43,36 +43,14 @@ nav {
     align-items: center;
 }
 
-.nav-logo-slot {
+.nav-logo {
     display: flex;
     align-items: center;
-    min-width: 50px;
-    height: 40px;
 }
 
-.static-header-logo {
+.header-logo {
     height: 40px;
     width: auto;
-}
-
-.hero-logo-wrapper {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#floating-logo {
-    max-height: 300px;
-    width: auto;
-    transform-origin: center center;
-    will-change: transform, top, left;
-}
-
-#floating-logo.floating {
-    position: fixed;
-    z-index: 1000;
-    pointer-events: none;
 }
 
 .nav-links {
