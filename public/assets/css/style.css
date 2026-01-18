@@ -77,6 +77,10 @@ nav {
     text-shadow: 0 0 10px #7fffbf;
 }
 
+nav .btn:last-child {
+    margin-left: -25px;
+}
+
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -88,6 +92,7 @@ nav {
     letter-spacing: 1px;
     font-family: 'Courier New', monospace;
     background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -123,7 +128,7 @@ main {
 
 .hero {
     text-align: center;
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 0;
 }
 
 .hero-content {
@@ -146,7 +151,7 @@ main {
 
 .page-hero {
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 0 0;
     margin-bottom: 2rem;
 }
 
@@ -171,8 +176,12 @@ main {
     margin: 3rem 0;
 }
 
+.content-section p {
+    margin-bottom: 1.5rem
+}
+
 .card {
-    padding: 1rem 0;
+    padding: 1rem 0 0;
 }
 
 .card.full-width {
