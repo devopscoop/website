@@ -41,8 +41,14 @@ Default branch is `main`; current HEAD is `launch`.
 
 ## Gotchas
 
-- **No build, test, lint, format, or typecheck tooling** exists. Do not add them without asking.
+- **No build, test, lint, format, or typecheck tooling** exists.
 - **Docker build is broken**: `Dockerfile` references `./sass` but no `sass/` directory exists. The real CSS is hand-written.
 - **Header/footer are loaded client-side** via `fetch()` in `components.js`. Pages require JS for navigation; there is no server-side include.
 - **No `.env` or environment variables** are used anywhere.
 - **Dependabot** config exists but is a placeholder — empty ecosystem, does nothing.
+
+## Agent rules
+
+- **Never force push** under any circumstances.
+- **Do not commit, merge, or push** without asking for consent first.
+- **Do not add build/test/lint/format tooling** without asking.

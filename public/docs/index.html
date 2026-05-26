@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Docs | devops.coop</title>
+    <meta name="description" content="Kubernetes tooling documentation and install guides" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="page-hero">
+            <h1>Kubernetes</h1>
+            <p>Essential CLI tools for working with Kubernetes clusters.</p>
+        </section>
+
+        <section class="content-section">
+            <ul class="benefits-list">
+                <li>
+                    <strong>kubectl</strong> &mdash; The Kubernetes command-line tool.
+                    <a href="https://kubernetes.io/docs/tasks/tools/#kubectl" target="_blank">Install kubectl &rarr;</a>
+                </li>
+                <li>
+                    <strong>krew</strong> &mdash; The kubectl plugin manager.
+                    <a href="https://krew.sigs.k8s.io/docs/user-guide/setup/install/" target="_blank">Install krew &rarr;</a>
+                    <ul style="padding-left:1.5rem;">
+                        <li>
+                            <strong>kubectl-netshoot</strong> &mdash; Spin up a netshoot container for in-cluster network troubleshooting. Requires krew. Add the index and install:
+                            <pre style="color:#7fffbf;background:rgba(0,0,0,0.3);padding:0.75rem;margin:0.5rem 0;border-radius:10px;overflow-x:auto;text-shadow:none;font-size:0.85rem;">kubectl krew index add netshoot https://github.com/nilic/kubectl-netshoot.git
+kubectl krew install netshoot/netshoot</pre>
+                            <a href="https://github.com/nilic/kubectl-netshoot" target="_blank">kubectl-netshoot on GitHub &rarr;</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>k9s</strong> &mdash; Terminal-based UI for managing clusters.
+                    <a href="https://k9scli.io/topics/install/" target="_blank">Install k9s &rarr;</a>
+                </li>
+                <li>
+                    <strong>stern</strong> &mdash; Multi-pod log tailing with color-coded output.
+                    <a href="https://github.com/stern/stern#installation" target="_blank">Install stern &rarr;</a>
+                </li>
+                <li>
+                    <strong>Helm</strong> &mdash; Package manager for Kubernetes.
+                    <a href="https://helm.sh/docs/intro/install/" target="_blank">Install Helm &rarr;</a>
+                </li>
+                <li>
+                    <strong>Kustomize</strong> &mdash; Kubernetes-native configuration management.
+                    <a href="https://kubectl.docs.kubernetes.io/installation/kustomize/" target="_blank">Install Kustomize &rarr;</a>
+                </li>
+                <li>
+                    <strong>jq</strong> &mdash; Command-line JSON processor.
+                    <a href="https://jqlang.github.io/jq/download/" target="_blank">Install jq &rarr;</a>
+                </li>
+                <li>
+                    <strong>yq</strong> &mdash; Command-line YAML processor.
+                    <a href="https://github.com/mikefarah/yq#installation" target="_blank">Install yq &rarr;</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/gradient.js"></script>
+</body>
+</html>

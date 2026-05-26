@@ -1,35 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headerContainer = document.getElementById('header-container');
     const footerContainer = document.getElementById('footer-container');
-    
+
     if (headerContainer) {
-        fetch('components/header.html')
+        fetch('/components/header.html')
             .then(response => response.text())
             .then(html => {
                 headerContainer.innerHTML = html;
                 highlightCurrentPage();
             });
     }
-    
+
     if (footerContainer) {
-        fetch('components/footer.html')
+        fetch('/components/footer.html')
             .then(response => response.text())
             .then(html => {
                 footerContainer.innerHTML = html;
             });
     }
-    
+
     function highlightCurrentPage() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const currentPath = window.location.pathname;
         const navLinks = document.querySelectorAll('.nav-links a');
-        
+
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
-            if (href === currentPage) {
+            const linkPath = href.startsWith('/') ? href : '/' + href;
+            if (currentPath === linkPath) {
                 link.classList.add('active');
-            }
-            if (currentPage === 'index.html' && href === 'index.html') {
-                return;
             }
         });
     }
